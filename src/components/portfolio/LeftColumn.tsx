@@ -43,12 +43,13 @@ export default function LeftColumn() {
             </p>
           </div>
           <Image
-            src="/anshuman-profile.jpg"
+            src="https://placehold.co/128x128.png"
             alt="Anshuman's profile picture"
             className="rounded-full hidden lg:block object-cover"
             width={128}
             height={128}
             priority
+            data-ai-hint="profile picture"
           />
         </div>
 
