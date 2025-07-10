@@ -32,8 +32,11 @@ export default function LeftColumn() {
       <div>
         <div className="flex items-center gap-6">
           <div className="flex-1">
-            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
-              Anshuman
+            <h1 className="group font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
+              Hey I'm Anshuman
+              <span className="inline-block transition-transform group-hover:animate-wave ml-2">
+                👋
+              </span>
             </h1>
             <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline">
               Front end developer
