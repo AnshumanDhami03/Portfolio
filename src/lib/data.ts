@@ -6,9 +6,9 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = {
-    github: 'https://github.com/anshu',
-    linkedin: 'https://linkedin.com/in/anshu',
-    gmail: 'anshu@example.com',
+    github: 'https://github.com/anshuman',
+    linkedin: 'https://linkedin.com/in/anshuman',
+    gmail: 'anshuman@example.com',
 };
 
 export const EXPERIENCES = [

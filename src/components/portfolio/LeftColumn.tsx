@@ -30,10 +30,10 @@ export default function LeftColumn() {
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
         <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-          Anshu
+          Anshuman
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline">
-          Full-Stack Developer
+          Front end developer
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
           I build exceptional and accessible digital experiences for the web.
@@ -91,7 +91,7 @@ export default function LeftColumn() {
             </a>
         </div>
         <Button asChild className="mt-8">
-            <a href="/anshu-cv.pdf" download>Download CV</a>
+            <a href="/anshuman-cv.pdf" download>Download CV</a>
         </Button>
       </div>
     </header>
