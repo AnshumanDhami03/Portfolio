@@ -42,7 +42,7 @@ export const PROJECTS = [
         imageUrl: 'https://i.postimg.cc/xTp8fhq0/Screenshot-2025-07-10-185132.png',
         imageHint: 'algorithm visualization',
         tech: ['React', 'TypeScript', 'Tailwind CSS'],
-        liveUrl: '#',
+        liveUrl: 'https://algo-vision-gray.vercel.app/',
         githubUrl: '#',
     },
     {
