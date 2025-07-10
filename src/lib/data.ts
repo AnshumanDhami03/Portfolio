@@ -48,8 +48,8 @@ export const PROJECTS = [
     {
         title: 'Smart Election',
         description: 'Online Voting through Facial Recognition. Developed a secure voting system using face recognition and Voter ID. Backend via Flask; used OpenCV for image encoding and identity validation. Integrated CSV for storing voter credentials and tracking vote status.',
-        imageUrl: 'https://placehold.co/200x112.png',
-        imageHint: 'facial recognition',
+        imageUrl: 'https://i.postimg.cc/4xPx23hN/evoting-concept-illustration-young-people-260nw-439415137.jpg',
+        imageHint: 'voting illustration',
         tech: ['Python', 'Flask', 'OpenCV'],
         liveUrl: null,
         githubUrl: 'https://github.com/AnshumanDhami03/smartElection',
