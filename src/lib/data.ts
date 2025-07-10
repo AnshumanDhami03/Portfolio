@@ -21,6 +21,14 @@ export const EXPERIENCES = [
     description: 'Completed a virtual internship focused on mobile app development fundamentals. Designed and developed interactive Android applications using Java/Kotlin and XML. Gained hands-on experience in UI/UX design, Firebase integration, and API handling.',
     skills: ['Android', 'Java', 'Kotlin', 'XML', 'Firebase', 'API Integration'],
   },
+  {
+    year: 'Feb 2022 — Apr 2022',
+    company: 'College Rollup',
+    companyUrl: '#',
+    role: 'Graphic Designer Intern',
+    description: 'Designed company’s Instagram posts, enhancing social media presence. Assisted in creating market-appealing graphics.',
+    skills: ['Graphic Design', 'Social Media Marketing', 'Canva', 'Figma'],
+  },
 ];
 
 export const PROJECTS = [
