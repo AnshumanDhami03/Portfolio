@@ -6,8 +6,14 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NAV_LINKS, SOCIAL_LINKS } from '@/lib/data';
 
+const titles = ['Front end developer', 'Data Analyst'];
+
 export default function LeftColumn() {
   const [activeSection, setActiveSection] = useState('about');
+  const [currentTitle, setCurrentTitle] = useState('');
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +33,32 @@ export default function LeftColumn() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleTyping = () => {
+      const currentWord = titles[titleIndex];
+      if (isDeleting) {
+        setCharIndex((prev) => prev - 1);
+        setCurrentTitle(currentWord.substring(0, charIndex - 1));
+        if (charIndex === 1) {
+          setIsDeleting(false);
+          setTitleIndex((prev) => (prev + 1) % titles.length);
+        }
+      } else {
+        setCharIndex((prev) => prev + 1);
+        setCurrentTitle(currentWord.substring(0, charIndex + 1));
+        if (charIndex === currentWord.length -1) {
+          setTimeout(() => setIsDeleting(true), 1500); // Pause before deleting
+        }
+      }
+    };
+
+    const typingSpeed = isDeleting ? 100 : 150;
+    const timeout = setTimeout(handleTyping, typingSpeed);
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, titleIndex]);
+
+
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
@@ -38,15 +70,16 @@ export default function LeftColumn() {
                 👋
               </span>
             </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline">
-              Front end developer
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline min-h-[28px]">
+              {currentTitle}
+              <span className="animate-ping">|</span>
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
               I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
             </p>
           </div>
           <Image
-            src="/~/studio/public/anshuman-profile.jpg"
+            src="https://placehold.co/128x128.png"
             alt="Anshuman's profile picture"
             className="rounded-full hidden lg:block object-cover"
             width={128}
