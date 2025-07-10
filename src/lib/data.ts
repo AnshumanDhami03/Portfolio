@@ -21,6 +21,7 @@ export const EXPERIENCES = [
     description: 'Completed a virtual internship focused on mobile app development fundamentals. Designed and developed interactive Android applications using Java/Kotlin and XML. Gained hands-on experience in UI/UX design, Firebase integration, and API handling.',
     skills: ['Android', 'Java', 'Kotlin', 'XML', 'Firebase', 'API Integration'],
     certificateUrl: 'https://drive.google.com/file/d/1EBJFhMZawidJ7k1CgNiT5P0oN5Zsy1xS/view?usp=sharing',
+    certificateImageUrl: 'https://placehold.co/400x280.png',
   },
   {
     year: 'Feb 2022 — Apr 2022',
@@ -30,6 +31,7 @@ export const EXPERIENCES = [
     description: 'Designed company’s Instagram posts, enhancing social media presence. Assisted in creating market-appealing graphics.',
     skills: ['Graphic Design', 'Social Media Marketing', 'Canva', 'Figma'],
     certificateUrl: 'https://drive.google.com/file/d/1f2OVXGpti9Bzt5ZNL1ZocTi7qfkNdVkM/view?usp=sharing',
+    certificateImageUrl: 'https://placehold.co/400x280.png',
   },
 ];
 

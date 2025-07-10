@@ -9,6 +9,13 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from '@/components/ui/button';
 import { ExternalLink } from 'lucide-react';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import Image from 'next/image';
 
 export default function ExperienceSection() {
   return (
@@ -38,11 +45,20 @@ export default function ExperienceSection() {
                       ))}
                     </ul>
                     {exp.certificateUrl && exp.certificateUrl !== '#' && (
-                        <Button asChild className="mt-4" size="sm">
-                            <a href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
-                                Certificate <ExternalLink className="ml-1.5 h-4 w-4" />
-                            </a>
-                        </Button>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger asChild>
+                            <Button asChild className="mt-4" size="sm">
+                                <a href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
+                                    Certificate <ExternalLink className="ml-1.5 h-4 w-4" />
+                                </a>
+                            </Button>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <Image src={exp.certificateImageUrl} alt={`${exp.company} certificate`} width={200} height={140} className="rounded-md" data-ai-hint="certificate document"/>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
                     )}
                   </AccordionContent>
                 </div>
