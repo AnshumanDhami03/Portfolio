@@ -10,7 +10,7 @@ export default function SectionWrapper({ id, title, children }: SectionWrapperPr
   return (
     <section id={id} className="mb-16 scroll-mt-24 md:mb-24 lg:mb-36" aria-label={title}>
       <div className="sticky top-0 z-20 -mx-6 mb-4 w-screen bg-background/80 px-6 py-5 backdrop-blur-sm md:-mx-12 md:px-12 lg:hidden">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-foreground text-center">
           {title}
         </h2>
       </div>
