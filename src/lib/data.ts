@@ -43,7 +43,7 @@ export const PROJECTS = [
         imageHint: 'algorithm visualization',
         tech: ['React', 'TypeScript', 'Tailwind CSS'],
         liveUrl: 'https://algo-vision-gray.vercel.app/',
-        githubUrl: '#',
+        githubUrl: 'https://github.com/AnshumanDhami03/AlgoVision',
     },
     {
         title: 'Project Management Tool',
