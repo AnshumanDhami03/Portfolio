@@ -52,7 +52,7 @@ export const PROJECTS = [
         imageHint: 'facial recognition',
         tech: ['Python', 'Flask', 'OpenCV'],
         liveUrl: null,
-        githubUrl: 'https://github.com/AnshumanDhami03/Smart_Election_System',
+        githubUrl: 'https://github.com/AnshumanDhami03/smartElection',
     },
     {
         title: 'AI Content Generator',
