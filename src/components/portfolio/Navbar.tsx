@@ -13,14 +13,12 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_LINKS.map((link) => document.getElementById(link.href.substring(1)));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          const newActiveSection = section.id;
-          if (activeSection !== newActiveSection) {
-            setActiveSection(newActiveSection);
+      for (const section of sections) {
+        if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+          if (activeSection !== section.id) {
+            setActiveSection(section.id);
           }
           break;
         }
@@ -28,6 +26,7 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
 

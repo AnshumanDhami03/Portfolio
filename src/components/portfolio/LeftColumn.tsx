@@ -23,20 +23,22 @@ export default function LeftColumn() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_LINKS.map((link) => document.getElementById(link.href.substring(1)));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(section.id);
+      for (const section of sections) {
+        if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+          if (activeSection !== section.id) {
+            setActiveSection(section.id);
+          }
           break;
         }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [activeSection]);
 
   useEffect(() => {
     const handleTyping = () => {
