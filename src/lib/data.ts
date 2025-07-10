@@ -39,7 +39,7 @@ export const PROJECTS = [
     {
         title: 'AlgoVision - Algorithm Simulation Web App',
         description: 'Built an interactive algorithm visualization platform for Sorting, Searching and MST algorithms. Used React with TypeScript to create modular components and styled with Tailwind CSS for a clean, responsive UI.',
-        imageUrl: 'https://placehold.co/200x112.png',
+        imageUrl: 'https://i.postimg.cc/xTp8fhq0/Screenshot-2025-07-10-185132.png',
         imageHint: 'algorithm visualization',
         tech: ['React', 'TypeScript', 'Tailwind CSS'],
         liveUrl: '#',
