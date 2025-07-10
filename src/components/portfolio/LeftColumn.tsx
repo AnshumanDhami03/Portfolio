@@ -69,32 +69,28 @@ export default function LeftColumn() {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <div className="flex items-start gap-4">
-          <div className="flex-1">
-            <h1 className="group font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
-              Hey I'm Anshuman
-              <span className="inline-block transition-transform group-hover:animate-wave ml-2">
-                👋
-              </span>
-            </h1>
-            <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline min-h-[28px]">
-              {currentTitle}
-              <span className="animate-ping">|</span>
-            </h2>
-            <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
-              I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
-            </p>
-          </div>
-          <Image
+        <Image
             src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
             alt="Anshuman's profile picture"
-            className="rounded-full object-cover mt-16 lg:mt-0"
+            className="rounded-full object-cover mb-4"
             width={128}
             height={128}
             priority
             data-ai-hint="profile picture"
-          />
-        </div>
+        />
+        <h1 className="group font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+            Hey I'm Anshuman
+            <span className="inline-block transition-transform group-hover:animate-wave ml-2">
+            👋
+            </span>
+        </h1>
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline min-h-[28px]">
+            {currentTitle}
+            <span className="animate-ping">|</span>
+        </h2>
+        <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
+            I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
+        </p>
 
         <nav className="hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
