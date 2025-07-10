@@ -6,7 +6,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
+import { Button } from '@/components/ui/button';
+import { ExternalLink } from 'lucide-react';
 
 export default function ExperienceSection() {
   return (
@@ -35,6 +37,13 @@ export default function ExperienceSection() {
                         </li>
                       ))}
                     </ul>
+                    {exp.certificateUrl && exp.certificateUrl !== '#' && (
+                        <Button asChild variant="link" className="p-0 mt-2 h-auto text-sm">
+                            <a href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
+                                View Certificate <ExternalLink className="ml-1.5 h-4 w-4" />
+                            </a>
+                        </Button>
+                    )}
                   </AccordionContent>
                 </div>
             </div>

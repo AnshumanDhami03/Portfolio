@@ -20,6 +20,7 @@ export const EXPERIENCES = [
     role: 'Application Development Engineer (Part-time, Remote)',
     description: 'Completed a virtual internship focused on mobile app development fundamentals. Designed and developed interactive Android applications using Java/Kotlin and XML. Gained hands-on experience in UI/UX design, Firebase integration, and API handling.',
     skills: ['Android', 'Java', 'Kotlin', 'XML', 'Firebase', 'API Integration'],
+    certificateUrl: '#',
   },
   {
     year: 'Feb 2022 — Apr 2022',
@@ -28,6 +29,7 @@ export const EXPERIENCES = [
     role: 'Graphic Designer Intern',
     description: 'Designed company’s Instagram posts, enhancing social media presence. Assisted in creating market-appealing graphics.',
     skills: ['Graphic Design', 'Social Media Marketing', 'Canva', 'Figma'],
+    certificateUrl: '#',
   },
 ];
 
