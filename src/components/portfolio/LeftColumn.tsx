@@ -69,7 +69,7 @@ export default function LeftColumn() {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <div className="flex items-center gap-6">
+        <div className="flex items-start gap-4">
           <div className="flex-1">
             <h1 className="group font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
               Hey I'm Anshuman
@@ -88,7 +88,7 @@ export default function LeftColumn() {
           <Image
             src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
             alt="Anshuman's profile picture"
-            className="rounded-full hidden lg:block object-cover"
+            className="rounded-full object-cover mt-16 lg:mt-0"
             width={128}
             height={128}
             priority
