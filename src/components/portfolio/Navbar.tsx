@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import { NAV_LINKS } from '@/lib/data';
-import { Menu, X } from 'lucide-react';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
+import { Menu } from 'lucide-react';
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState('about');
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSheetOpen, setIsSheetOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,38 +34,59 @@ export default function Navbar() {
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
-    setIsOpen(false);
+    setIsSheetOpen(false);
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm lg:hidden">
-      <div className="mx-auto max-w-screen-xl px-6">
+      <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="text-xl font-bold font-headline text-foreground">Anshuman</a>
-          <Button variant="ghost" size="icon" onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          
+          {/* Desktop-like nav for medium screens */}
+          <div className="hidden sm:flex items-center space-x-4">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
+                className={`text-sm font-medium transition-colors ${
+                  activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground hover:text-primary'
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          
+          {/* Sheet menu for small screens */}
+          <div className="sm:hidden">
+            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="flex flex-col space-y-4 pt-8">
+                  {NAV_LINKS.map((link) => (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      onClick={(e) => handleLinkClick(e, link.href)}
+                      className={`block py-2 text-lg font-medium ${
+                        activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground'
+                      }`}
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
-      {isOpen && (
-        <div className="px-6 pb-4">
-          <ul className="flex flex-col items-start space-y-2">
-            {NAV_LINKS.map((link) => (
-              <li key={link.name}>
-                <a
-                  href={link.href}
-                  onClick={(e) => handleLinkClick(e, link.href)}
-                  className={`block py-2 text-lg font-medium ${
-                    activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground'
-                  }`}
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
     </nav>
   );
 }
