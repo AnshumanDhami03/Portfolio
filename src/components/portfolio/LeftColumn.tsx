@@ -47,12 +47,12 @@ export default function LeftColumn() {
         setCharIndex((prev) => prev + 1);
         setCurrentTitle(currentWord.substring(0, charIndex + 1));
         if (charIndex === currentWord.length -1) {
-          setTimeout(() => setIsDeleting(true), 1500); // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 1000); // Pause before deleting
         }
       }
     };
 
-    const typingSpeed = isDeleting ? 100 : 150;
+    const typingSpeed = isDeleting ? 50 : 100;
     const timeout = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timeout);
