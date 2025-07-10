@@ -158,7 +158,7 @@ export default function LeftColumn() {
             </a>
         </div>
         <Button asChild className="mt-8">
-            <a href="/anshuman-cv.pdf" download>Download CV</a>
+            <a href="https://drive.google.com/uc?export=download&id=1e6uSrytsS4Z3EkKFPuBoTLqsvVayfLSv" target="_blank" rel="noopener noreferrer">Download CV</a>
         </Button>
       </div>
     </header>
