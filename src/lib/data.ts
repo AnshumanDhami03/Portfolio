@@ -55,12 +55,12 @@ export const PROJECTS = [
         githubUrl: 'https://github.com/AnshumanDhami03/smartElection',
     },
     {
-        title: 'AI Content Generator',
-        description: 'A SaaS platform that leverages AI to generate high-quality marketing copy, blog posts, and social media content. Integrated with OpenAI API.',
+        title: 'Counselling Portal',
+        description: 'A web app for college counselling that determines course eligibility based on academic marks. Used PHP for server logic, MySQL for data, and a responsive UI built with HTML, CSS, & JavaScript.',
         imageUrl: 'https://placehold.co/200x112.png',
-        imageHint: 'modern application',
-        tech: ['SvelteKit', 'Firebase', 'OpenAI API', 'Tailwind CSS'],
-        liveUrl: '#',
+        imageHint: 'portal education',
+        tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
+        liveUrl: null,
         githubUrl: null,
     },
 ];
