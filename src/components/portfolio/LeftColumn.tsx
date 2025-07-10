@@ -15,6 +15,11 @@ export default function LeftColumn() {
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = NAV_LINKS.map((link) => document.getElementById(link.href.substring(1)));
@@ -93,7 +98,11 @@ export default function LeftColumn() {
           <ul className="mt-16 w-max">
             {NAV_LINKS.map((link) => (
               <li key={link.name}>
-                <a className="group flex items-center py-3" href={link.href}>
+                <a 
+                  className="group flex items-center py-3" 
+                  href={link.href}
+                  onClick={(e) => handleLinkClick(e, link.href)}
+                >
                   <span
                     className={`nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-foreground motion-reduce:transition-none ${
                       activeSection === link.href.substring(1) ? 'w-16 bg-foreground' : ''
