@@ -21,24 +21,6 @@ export const EXPERIENCES = [
     description: 'Completed a virtual internship focused on mobile app development fundamentals. Designed and developed interactive Android applications using Java/Kotlin and XML. Gained hands-on experience in UI/UX design, Firebase integration, and API handling.',
     skills: ['Android', 'Java', 'Kotlin', 'XML', 'Firebase', 'API Integration'],
   },
-  {
-    year: '2021 — 2023',
-    company: 'Data Dynamics',
-    companyUrl: '#',
-    role: 'Senior Software Engineer',
-    description:
-      'Engineered and maintained major features of Data Dynamics\'s customer-facing web app using ES6, Handlebars, jQuery, CSS, and Less. Collaborated with UI/UX and product management teams to develop and iterate on new features.',
-    skills: ['JavaScript (ES6+)', 'Ruby on Rails', 'PostgreSQL', 'REST APIs', 'jQuery'],
-  },
-  {
-    year: '2019 — 2021',
-    company: 'Creative Solutions',
-    companyUrl: '#',
-    role: 'Software Engineer',
-    description:
-      'Developed and shipped highly interactive web applications for a diverse range of clients. Specialized in creating responsive and accessible user interfaces that provided an optimal user experience across all devices.',
-    skills: ['HTML5', 'CSS3', 'JavaScript', 'WordPress', 'PHP', 'Figma'],
-  },
 ];
 
 export const PROJECTS = [
