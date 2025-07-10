@@ -46,13 +46,13 @@ export const PROJECTS = [
         githubUrl: 'https://github.com/AnshumanDhami03/AlgoVision',
     },
     {
-        title: 'Project Management Tool',
-        description: 'A web application that helps teams manage projects, track tasks, and collaborate effectively. Features include drag-and-drop boards, real-time updates, and reporting.',
+        title: 'Smart Election',
+        description: 'Online Voting through Facial Recognition. Developed a secure voting system using face recognition and Voter ID. Backend via Flask; used OpenCV for image encoding and identity validation. Integrated CSV for storing voter credentials and tracking vote status.',
         imageUrl: 'https://placehold.co/200x112.png',
-        imageHint: 'dashboard management',
-        tech: ['React', 'Node.js', 'WebSocket', 'MongoDB', 'Express.js'],
-        liveUrl: '#',
-        githubUrl: '#',
+        imageHint: 'facial recognition',
+        tech: ['Python', 'Flask', 'OpenCV'],
+        liveUrl: null,
+        githubUrl: 'https://github.com/AnshumanDhami03/Smart_Election_System',
     },
     {
         title: 'AI Content Generator',
@@ -69,18 +69,18 @@ export const CATEGORIZED_TECH_STACK = [
     {
         category: 'Programming Languages',
         skills: [
-            { name: 'Java', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M128,24A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm48-88a8,8,0,0,1-8,8H101.82l23.55,23.55a8,8,0,0,1-11.32,11.32l-39.2-39.2a.8.8,0,0,1-.12-.12l-.11-.12a.86.86,0,0,1-.11-.14L74,128l.45-.61a.86.86,0,0,1,.11-.14l.11-.12a.8.8,0,0,1,.12-.12l39.2-39.2a8,8,0,0,1,11.32,11.32L101.82,120H168A8,8,0,0,1,176,128Z"/></g></svg>' },
-            { name: 'Python', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M224.49,136.49l-48,48a12,12,0,0,1-17-17l48-48a12,12,0,0,1,17,17ZM108,128a12,12,0,1,0-12-12A12,12,0,0,0,108,128Zm109.66-34.34a12,12,0,0,0-17,0l-48,48a12,12,0,0,0,17,17l48-48A12,12,0,0,0,217.66,93.66ZM128,108a12,12,0,1,0,12,12A12,12,0,0,0,128,108ZM93.66,38.34a12,12,0,0,0-17,0l-48,48a12,12,0,0,0,17,17l48-48A12,12,0,0,0,93.66,38.34ZM48,120a12,12,0,1,0,12,12A12,12,0,0,0,48,120Zm136.49,29.49a12,12,0,0,0-17-17l-48,48a12,12,0,0,0,17,17l48-48ZM148,128a12,12,0,1,0-12-12A12,12,0,0,0,148,128Z"/></g></svg>' },
-            { name: 'JavaScript', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M128,24A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-88a28,28,0,0,1-22.31,27.24A20,20,0,0,0,128,192a20,20,0,0,0-17.69-27.24A28,28,0,1,1,168,128Z"/></g></svg>' },
-            { name: 'PHP', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M128,24A104,104,0,1,0,232,128,104.12,104.12,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm32-56H123.31l-6-24h38.38a8,8,0,0,0,7.25-11.23L156.4,112H118.55l-6-24h42.14a8,8,0,0,0,0-16H98.31a8,8,0,0,0-7.85,6.33l-12,48A8,8,0,0,0,86.31,168H112v8a8,8,0,0,0,16,0v-8h16a8,8,0,0,0,0-16Z"/></g></svg>' },
+            { name: 'Java', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>' },
+            { name: 'Python', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>' },
+            { name: 'JavaScript', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-braces"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>' },
+            { name: 'PHP', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-circle"><circle cx="12" cy="12" r="10"/><path d="m10 10-2 2 2 2"/><path d="m14 14 2-2-2-2"/></svg>' },
             { name: 'SQL', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-database"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>' },
         ]
     },
     {
         category: 'Frontend & Frameworks',
         skills: [
-            { name: 'HTML5', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M224,40H32A16,16,0,0,0,16,56V200a16,16,0,0,0,16,16H224a16,16,0,0,0,16-16V56A16,16,0,0,0,224,40ZM96,176a8,8,0,0,1-16,0V80a8,8,0,0,1,16,0Zm48,0a8,8,0,0,1-16,0V120H112v24a8,8,0,0,1-16,0V120a8,8,0,0,1,8-8h24a8,8,0,0,1,8,8v40a8,8,0,0,1-8,8Zm48-32h-8v24a8,8,0,0,1-16,0V144h-8a8,8,0,0,1,0-16h32a8,8,0,0,1,0,16Z"/></g></svg>' },
-            { name: 'CSS3', icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><g><path d="M152,112a8,8,0,0,0,8,8h24v24a8,8,0,0,0,16,0V120a24,24,0,0,0-24-24H160a8,8,0,0,0-8,8Zm-61.26-4.14,24-40A8,8,0,1,1,126,75.86L108,104h20a8,8,0,0,1,0,16H90.74a8,8,0,0,1-6.9-3.86,8,8,0,0,1,1.17-8.27L104,88,86.26,58.14a8,8,0,1,1,13-7.8L112,69.72,99.26,90.14ZM224,56V200a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V56A16,16,0,0,1,48,40H208A16,16,0,0,1,224,56Z"/></g></svg>' },
+            { name: 'HTML5', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-code-2"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m5 12-3 3 3 3"/><path d="m9 18 3-3-3-3"/></svg>' },
+            { name: 'CSS3', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-image"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>' },
             { name: 'Tailwind CSS', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wind"><path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/></svg>' },
             { name: 'React.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-atom"><circle cx="12" cy="12" r="1"/><path d="M20.2 20.2c2.04-2.03.02-5.91-2.82-8.75-2.86-2.86-6.74-4.88-8.77-2.85"/><path d="M3.8 3.8c-2.04 2.03-.02 5.91 2.82 8.75 2.86 2.86 6.74 4.88 8.77 2.85"/><path d="M20.2 3.8c-2.03 2.04-5.91.02-8.75-2.82-2.86-2.86-4.88-6.74-2.85-8.77"/><path d="M3.8 20.2c2.03-2.04 5.91-.02 8.75 2.82 2.86 2.86 4.88 6.74 2.85 8.77"/></svg>' },
             { name: 'Next.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" x2="12" y1="22.08" y2="12"/></svg>' },
