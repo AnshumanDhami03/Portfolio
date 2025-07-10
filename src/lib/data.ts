@@ -57,8 +57,8 @@ export const PROJECTS = [
     {
         title: 'Counselling Portal',
         description: 'A web app for college counselling that determines course eligibility based on academic marks. Used PHP for server logic, MySQL for data, and a responsive UI built with HTML, CSS, & JavaScript.',
-        imageUrl: 'https://placehold.co/200x112.png',
-        imageHint: 'portal education',
+        imageUrl: 'https://i.postimg.cc/CKPvMb9B/istockphoto-1306158131-612x612.jpg',
+        imageHint: 'counselling portal',
         tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
         liveUrl: null,
         githubUrl: 'https://github.com/AnshumanDhami03/Counselling-Portal',
