@@ -6,7 +6,7 @@ export const NAV_LINKS = [
 ];
 
 export const SOCIAL_LINKS = {
-    github: 'https://github.com/anshuman',
+    github: 'https://github.com/AnshumanDhami03',
     linkedin: 'https://linkedin.com/in/anshuman',
     gmail: 'anshuman@example.com',
 };
