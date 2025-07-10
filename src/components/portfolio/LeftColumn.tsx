@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NAV_LINKS, SOCIAL_LINKS } from '@/lib/data';
@@ -29,15 +30,28 @@ export default function LeftColumn() {
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
       <div>
-        <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
-          Anshuman
-        </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline">
-          Front end developer
-        </h2>
-        <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
-          I build exceptional and accessible digital experiences for the web.
-        </p>
+        <div className="flex items-center gap-6">
+          <div className="flex-1">
+            <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-16 lg:mt-0">
+              Anshuman
+            </h1>
+            <h2 className="mt-3 text-lg font-medium tracking-tight text-foreground sm:text-xl font-headline">
+              Front end developer
+            </h2>
+            <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
+              I build exceptional and accessible digital experiences for the web.
+            </p>
+          </div>
+          <Image
+            src="https://placehold.co/128x128.png"
+            alt="Anshuman's profile picture"
+            className="rounded-full hidden lg:block"
+            width={128}
+            height={128}
+            data-ai-hint="profile picture"
+            priority
+          />
+        </div>
 
         <nav className="hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
