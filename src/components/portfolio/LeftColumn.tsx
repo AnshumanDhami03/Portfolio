@@ -17,26 +17,36 @@ export default function LeftColumn() {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.querySelector(href);
+    if (element) {
+        const yOffset = -80; 
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    }
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = NAV_LINKS.map((link) => document.getElementById(link.href.substring(1)));
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-      for (const section of sections) {
-        if (section && section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
-          if (activeSection !== section.id) {
-            setActiveSection(section.id);
-          }
-          break;
+        const sections = NAV_LINKS.map(link => document.getElementById(link.href.substring(1)));
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+    
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const section = sections[i];
+            if (section && section.offsetTop <= scrollPosition) {
+                if (activeSection !== section.id) {
+                    setActiveSection(section.id);
+                }
+                return;
+            }
         }
-      }
+    
+        if (window.scrollY < 200 && activeSection !== 'about') {
+            setActiveSection('about');
+        }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); 
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [activeSection]);
 
@@ -54,7 +64,7 @@ export default function LeftColumn() {
         setCharIndex((prev) => prev + 1);
         setCurrentTitle(currentWord.substring(0, charIndex + 1));
         if (charIndex === currentWord.length -1) {
-          setTimeout(() => setIsDeleting(true), 1000); // Pause before deleting
+          setTimeout(() => setIsDeleting(true), 1000);
         }
       }
     };
@@ -67,8 +77,8 @@ export default function LeftColumn() {
 
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-      <div>
+    <header className="lg:sticky lg:top-0 flex flex-col items-center text-center lg:max-h-screen w-full lg:w-3/4 py-12 lg:py-24">
+      <div className="flex flex-col items-center text-center">
         <Image
             src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
             alt="Anshuman's profile picture"
@@ -88,39 +98,39 @@ export default function LeftColumn() {
             {currentTitle}
             <span className="animate-ping">|</span>
         </h2>
-        <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
+        <p className="mt-4 max-w-lg leading-normal text-muted-foreground">
             I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
         </p>
 
-        <nav className="hidden lg:block" aria-label="In-page jump links">
-          <ul className="mt-16 w-max">
+        <nav className="hidden lg:block mt-8" aria-label="In-page jump links">
+          <ul className="flex items-center gap-6">
             {NAV_LINKS.map((link) => (
               <li key={link.name}>
                 <a 
-                  className="group flex items-center py-3" 
+                  className="group flex flex-col items-center py-2" 
                   href={link.href}
                   onClick={(e) => handleLinkClick(e, link.href)}
                 >
                   <span
-                    className={`nav-indicator mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-foreground motion-reduce:transition-none ${
-                      activeSection === link.href.substring(1) ? 'w-16 bg-foreground' : ''
-                    }`}
-                  ></span>
-                  <span
-                    className={`nav-text text-xs font-bold uppercase tracking-widest text-muted-foreground group-hover:text-foreground ${
-                      activeSection === link.href.substring(1) ? 'text-foreground' : ''
+                    className={`nav-text text-sm font-medium uppercase tracking-widest transition-colors ${
+                      activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
                     }`}
                   >
                     {link.name}
                   </span>
+                   <span
+                    className={`nav-indicator mt-1 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full ${
+                      activeSection === link.href.substring(1) ? 'w-full' : ''
+                    }`}
+                  ></span>
                 </a>
               </li>
             ))}
           </ul>
         </nav>
       </div>
-      <div>
-        <div className="mt-8 flex items-center" aria-label="Social media">
+      <div className="mt-8 flex flex-col items-center">
+        <div className="flex items-center" aria-label="Social media">
             <a
               href={SOCIAL_LINKS.github}
               target="_blank"
