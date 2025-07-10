@@ -61,7 +61,7 @@ export const PROJECTS = [
         imageHint: 'portal education',
         tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
         liveUrl: null,
-        githubUrl: null,
+        githubUrl: 'https://github.com/AnshumanDhami03/Counselling-Portal',
     },
 ];
 
