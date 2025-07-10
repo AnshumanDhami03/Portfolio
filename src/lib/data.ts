@@ -1,3 +1,4 @@
+
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
@@ -13,13 +14,12 @@ export const SOCIAL_LINKS = {
 
 export const EXPERIENCES = [
   {
-    year: '2023 — Present',
-    company: 'Innovatech',
+    year: 'Sep 2023 — Oct 2023',
+    company: 'Bharat Intern',
     companyUrl: '#',
-    role: 'Lead Engineer',
-    description:
-      'Deliver high-quality, robust production code for a diverse array of projects for clients including Harvard Business School, Everytown for Gun Safety, Pratt Institute, Koala Health, The 19th News, and more. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.',
-    skills: ['React', 'Next.js', 'TypeScript', 'Node.js', 'GraphQL', 'AWS'],
+    role: 'Application Development Engineer (Part-time, Remote)',
+    description: 'Completed a virtual internship focused on mobile app development fundamentals. Designed and developed interactive Android applications using Java/Kotlin and XML. Gained hands-on experience in UI/UX design, Firebase integration, and API handling.',
+    skills: ['Android', 'Java', 'Kotlin', 'XML', 'Firebase', 'API Integration'],
   },
   {
     year: '2021 — 2023',
