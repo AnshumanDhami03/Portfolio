@@ -86,7 +86,7 @@ export default function LeftColumn() {
             </p>
           </div>
           <Image
-            src="https://placehold.co/128x128.png"
+            src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
             alt="Anshuman's profile picture"
             className="rounded-full hidden lg:block object-cover"
             width={128}
