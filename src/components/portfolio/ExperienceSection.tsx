@@ -38,9 +38,9 @@ export default function ExperienceSection() {
                       ))}
                     </ul>
                     {exp.certificateUrl && exp.certificateUrl !== '#' && (
-                        <Button asChild variant="link" className="p-0 mt-2 h-auto text-sm">
+                        <Button asChild className="mt-4" size="sm">
                             <a href={exp.certificateUrl} target="_blank" rel="noopener noreferrer">
-                                View Certificate <ExternalLink className="ml-1.5 h-4 w-4" />
+                                Certificate <ExternalLink className="ml-1.5 h-4 w-4" />
                             </a>
                         </Button>
                     )}
