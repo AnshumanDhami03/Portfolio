@@ -39,7 +39,7 @@ export default function LeftColumn() {
               Front end developer
             </h2>
             <p className="mt-4 max-w-xs leading-normal text-muted-foreground">
-              I build exceptional and accessible digital experiences for the web.
+              I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
             </p>
           </div>
           <Image
