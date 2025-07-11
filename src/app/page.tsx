@@ -15,7 +15,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import DataAnalysisProjectsSection from '@/components/portfolio/DataAnalysisProjectsSection';
 import ArtistAboutSection from '@/components/portfolio/ArtistAboutSection';
 import ArtistGallerySection from '@/components/portfolio/ArtistGallerySection';
-import ArtistCommissionSection from '@/components/portfolio/ArtistCommissionSection';
+import ContactMeSection from '@/components/portfolio/ContactMeSection';
 
 export type ProfileType = 'developer' | 'artist';
 
@@ -65,7 +65,7 @@ export default function Home() {
                   <ArtistGallerySection />
                 </AnimatedSection>
                 <AnimatedSection>
-                  <ArtistCommissionSection />
+                  <ContactMeSection />
                 </AnimatedSection>
               </>
             )}

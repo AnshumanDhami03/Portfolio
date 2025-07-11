@@ -11,7 +11,7 @@ export const NAV_LINKS = [
 export const ARTIST_NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Gallery', href: '#gallery' },
-  { name: 'Commissions', href: '#commissions' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export const SOCIAL_LINKS = {
@@ -182,6 +182,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
