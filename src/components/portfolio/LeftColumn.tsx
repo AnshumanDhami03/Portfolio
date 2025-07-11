@@ -100,7 +100,7 @@ export default function LeftColumn() {
             <span className="animate-ping">|</span>
         </h2>
         <p className="mt-4 max-w-lg leading-normal text-muted-foreground">
-            I'm a creative <span className="font-medium text-foreground">Frontend developer</span>. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
+            I'm a creative <span className="font-medium text-foreground">Frontend developer</span> based in India 🇮🇳. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
         </p>
 
         <nav className="hidden lg:block mt-8" aria-label="In-page jump links">
