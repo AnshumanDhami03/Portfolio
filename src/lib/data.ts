@@ -127,10 +127,10 @@ export const CATEGORIZED_TECH_STACK = [
 
 export const ARTIST_GALLERY = [
     {
-        title: "Dragon's Breath",
-        description: 'A concept piece exploring a mythical beast in its natural, fiery habitat.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageHint: 'fantasy dragon',
+        title: "Radha Krishna",
+        description: 'A divine artwork capturing the eternal love of Radha and Krishna.',
+        imageUrl: 'https://i.postimg.cc/kGsFpWWD/Radha-Krishna.png',
+        imageHint: 'radha krishna divine',
     },
     {
         title: 'Cyberpunk Alley',
@@ -165,3 +165,6 @@ export const TECH_STACK = [
     { name: 'Firebase', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>' },
     { name: 'Figma', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>' },
 ];
+
+
+    
