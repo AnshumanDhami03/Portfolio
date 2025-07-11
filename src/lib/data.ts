@@ -21,7 +21,7 @@ export const SOCIAL_LINKS = {
 };
 
 export const ARTIST_SOCIAL_LINKS = {
-    instagram: 'https://www.instagram.com',
+    instagram: 'https://www.instagram.com/anshuman_zodiax/',
     deviantArt: 'https://www.deviantart.com',
     gmail: 'dhamianshuman@gmail.com',
 };
@@ -182,6 +182,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
