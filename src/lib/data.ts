@@ -156,6 +156,12 @@ export const ARTIST_GALLERY = [
         imageUrl: 'https://i.postimg.cc/mgr372Cj/Ship.jpg',
         imageHint: 'ship sea',
     },
+    {
+        title: 'Solitude and Peace',
+        description: 'A peaceful artwork representing solitude.',
+        imageUrl: 'https://i.postimg.cc/XvfvJ9qz/Solitude-and-peace.jpg',
+        imageHint: 'solitude peace',
+    },
 ];
 
 export const TECH_STACK = [
@@ -176,6 +182,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
