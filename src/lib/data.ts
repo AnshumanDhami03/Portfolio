@@ -58,7 +58,7 @@ export const PROJECTS = [
     {
         title: 'Counselling Portal',
         description: 'A web app for college counselling that determines course eligibility based on academic marks. Used PHP for server logic, MySQL for data, and a responsive UI built with HTML, CSS, & JavaScript.',
-        imageUrl: 'https://i.postimg.cc/CKPvMb9B/istockphoto-1306158131-612x612.jpg',
+        imageUrl: 'https://i.postimg.cc/CKPvMb9B/istockphoto-130615831-612x612.jpg',
         imageHint: 'counselling portal',
         tech: ['PHP', 'MySQL', 'HTML', 'CSS', 'JavaScript'],
         liveUrl: null,
@@ -79,7 +79,7 @@ export const DATA_ANALYSIS_PROJECTS = [
     {
         title: 'Loan Data Dashboard Suite (Power BI)',
         description: 'Designed to support informed decision-making, the visuals help identify patterns, track portfolio risks, and uncover areas for operational improvement. By bringing together multiple perspectives in one platform, the project aims to simplify complex loan data and turn it into practical, actionable insights. Built using Power BI, Excel, and SQL, the solution enables data filtering, trend identification, and risk tracking.',
-        imageUrl: 'https://placehold.co/200x48.png',
+        imageUrl: 'https://i.postimg.cc/vZwXPXfV/Screenshot-2025-07-11-092904.png',
         imageHint: 'loan dashboard',
         tech: ['Power BI', 'Excel', 'SQL'],
         liveUrl: null,
@@ -129,6 +129,7 @@ export const TECH_STACK = [
 
     
     
+
 
 
 
