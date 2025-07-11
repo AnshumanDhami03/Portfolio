@@ -124,7 +124,7 @@ export const CATEGORIZED_TECH_STACK = [
     {
         category: 'Data Analyst Skillset',
         skills: [
-            { name: 'Microsoft Excel', icon: 'https://i.postimg.cc/cLYxVwgV/icons8-microsoft-excel-2019-48.png' },
+            { name: 'Microsoft Excel', icon: 'https://i.postimg.cc/5N9zk2p7/icons8-excel-48.png' },
             { name: 'Python', icon: 'https://i.postimg.cc/Cx0BckjJ/icons8-python-48.png' },
             { name: 'SQL', icon: 'https://i.postimg.cc/XvV5YdqX/sql-server.png' },
             { name: 'Power BI', icon: 'https://i.postimg.cc/7Z02s2Zb/icons8-power-bi-2021-48.png' },
@@ -190,6 +190,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
