@@ -152,7 +152,7 @@ export const ARTIST_GALLERY = [
     },
     {
         title: 'Ship at Sea',
-        description: 'A majestic ship sailing on the open ocean, capturing the spirit of adventure.',
+        description: 'A majestic ship sailing underwater, capturing the spirit of adventure.',
         imageUrl: 'https://i.postimg.cc/mgr372Cj/Ship.jpg',
         imageHint: 'ship sea',
     },
@@ -176,5 +176,6 @@ export const TECH_STACK = [
     
 
     
+
 
 
