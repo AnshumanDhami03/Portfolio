@@ -9,7 +9,7 @@ import { NAV_LINKS, SOCIAL_LINKS, ARTIST_NAV_LINKS, ARTIST_SOCIAL_LINKS } from '
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import type { ProfileType } from '@/app/page';
 
-const developerTitles = ['Front end developer', 'Data Analyst'];
+const developerTitles = ['Front-End Developer', 'Data Analyst'];
 const artistTitles = ['Digital Artist', 'Illustrator'];
 
 type LeftColumnProps = {
