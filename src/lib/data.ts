@@ -23,7 +23,7 @@ export const SOCIAL_LINKS = {
 export const ARTIST_SOCIAL_LINKS = {
     instagram: 'https://www.instagram.com',
     deviantArt: 'https://www.deviantart.com',
-    gmail: 'anshuman.artist@example.com',
+    gmail: 'dhamianshuman@gmail.com',
 };
 
 
@@ -182,6 +182,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
