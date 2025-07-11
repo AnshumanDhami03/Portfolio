@@ -76,31 +76,6 @@ export default function Navbar({ activeProfile, onProfileToggle }: NavbarProps) 
             ))}
           </div>
           
-          <div className="sm:hidden">
-            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right">
-                <div className="flex flex-col space-y-4 pt-8">
-                  {navLinks.map((link) => (
-                    <a
-                      key={link.name}
-                      href={link.href}
-                      onClick={(e) => handleLinkClick(e, link.href)}
-                      className={`block py-2 text-lg font-medium ${
-                        activeSection === link.href.substring(1) ? 'text-primary' : 'text-foreground'
-                      }`}
-                    >
-                      {link.name}
-                    </a>
-                  ))}
-                </div>
-              </SheetContent>
-            </Sheet>
-          </div>
         </div>
       </div>
     </nav>
