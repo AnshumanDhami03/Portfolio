@@ -83,7 +83,7 @@ export const DATA_ANALYSIS_PROJECTS = [
         imageHint: 'loan dashboard',
         tech: ['Power BI', 'Excel', 'SQL'],
         liveUrl: null,
-        githubUrl: null,
+        githubUrl: 'https://github.com/AnshumanDhami03/Bank-Loan-Insights',
     },
 ];
 
@@ -129,6 +129,7 @@ export const TECH_STACK = [
 
     
     
+
 
 
 
