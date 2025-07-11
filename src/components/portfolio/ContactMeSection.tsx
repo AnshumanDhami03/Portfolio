@@ -31,9 +31,7 @@ export default function ContactMeSection() {
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     const subject = encodeURIComponent(`Message from ${values.name} via your portfolio`);
-    const body = encodeURIComponent(
-      `${values.message}\n\nFrom: ${values.name}\nEmail: ${values.email}`
-    );
+    const body = encodeURIComponent(values.message);
     const mailtoLink = `mailto:${ARTIST_SOCIAL_LINKS.gmail}?subject=${subject}&body=${body}`;
     
     window.location.href = mailtoLink;
