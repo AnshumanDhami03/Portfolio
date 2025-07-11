@@ -1,18 +1,26 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
-import { NAV_LINKS } from '@/lib/data';
+import { NAV_LINKS, ARTIST_NAV_LINKS } from '@/lib/data';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
+import type { ProfileType } from '@/app/page';
 
-export default function Navbar() {
+type NavbarProps = {
+  activeProfile: ProfileType;
+}
+
+export default function Navbar({ activeProfile }: NavbarProps) {
   const [activeSection, setActiveSection] = useState('about');
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
+  const navLinks = activeProfile === 'developer' ? NAV_LINKS : ARTIST_NAV_LINKS;
+
   useEffect(() => {
     const handleScroll = () => {
-      const sections = NAV_LINKS.map((link) => document.getElementById(link.href.substring(1)));
+      const sections = navLinks.map((link) => document.getElementById(link.href.substring(1)));
       const scrollPosition = window.scrollY + window.innerHeight / 2;
 
       for (const section of sections) {
@@ -28,7 +36,7 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeSection]);
+  }, [activeSection, navLinks]);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -44,9 +52,8 @@ export default function Navbar() {
             WELCOME to <span style={{ color: '#4B0082' }}>ANSHU's</span> Portfolio
           </a>
           
-          {/* Desktop-like nav for medium screens */}
           <div className="hidden sm:flex items-center space-x-4">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -60,7 +67,6 @@ export default function Navbar() {
             ))}
           </div>
           
-          {/* Sheet menu for small screens */}
           <div className="sm:hidden">
             <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
               <SheetTrigger asChild>
@@ -70,7 +76,7 @@ export default function Navbar() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-4 pt-8">
-                  {NAV_LINKS.map((link) => (
+                  {navLinks.map((link) => (
                     <a
                       key={link.name}
                       href={link.href}

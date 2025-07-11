@@ -1,4 +1,5 @@
 
+
 export const NAV_LINKS = [
   { name: 'About', href: '#about' },
   { name: 'Experience', href: '#experience' },
@@ -7,11 +8,24 @@ export const NAV_LINKS = [
   { name: 'Data Analysis', href: '#data-analysis' },
 ];
 
+export const ARTIST_NAV_LINKS = [
+  { name: 'About', href: '#about' },
+  { name: 'Gallery', href: '#gallery' },
+  { name: 'Commissions', href: '#commissions' },
+];
+
 export const SOCIAL_LINKS = {
     github: 'https://github.com/AnshumanDhami03',
     linkedin: 'https://www.linkedin.com/in/anshuman-dhami-546078229/',
     gmail: 'dhamianshuman@gmail.com',
 };
+
+export const ARTIST_SOCIAL_LINKS = {
+    instagram: 'https://www.instagram.com',
+    deviantArt: 'https://www.deviantart.com',
+    gmail: 'anshuman.artist@example.com',
+};
+
 
 export const EXPERIENCES = [
   {
@@ -111,6 +125,33 @@ export const CATEGORIZED_TECH_STACK = [
 ];
 
 
+export const ARTIST_GALLERY = [
+    {
+        title: "Dragon's Breath",
+        description: 'A concept piece exploring a mythical beast in its natural, fiery habitat.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'fantasy dragon',
+    },
+    {
+        title: 'Cyberpunk Alley',
+        description: 'An atmospheric illustration of a rain-slicked futuristic city street.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'cyberpunk city',
+    },
+    {
+        title: 'Forest Spirit',
+        description: 'Character design for a guardian of an ancient, enchanted forest.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'fantasy character',
+    },
+    {
+        title: 'Floating Islands',
+        description: 'A serene landscape painting of islands drifting in the sky.',
+        imageUrl: 'https://placehold.co/600x400.png',
+        imageHint: 'fantasy landscape',
+    },
+];
+
 export const TECH_STACK = [
     { name: 'JavaScript', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-braces"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5a2 2 0 0 1 2-2 2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></svg>' },
     { name: 'TypeScript', icon: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000' },
@@ -124,15 +165,3 @@ export const TECH_STACK = [
     { name: 'Firebase', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>' },
     { name: 'Figma', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>' },
 ];
-
-
-
-    
-    
-
-
-
-
-
-
-
