@@ -139,10 +139,10 @@ export const ARTIST_GALLERY = [
         imageHint: 'lotus flower',
     },
     {
-        title: 'Forest Spirit',
-        description: 'Character design for a guardian of an ancient, enchanted forest.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageHint: 'fantasy character',
+        title: 'Blossom Scenery',
+        description: 'A tranquil scenery of cherry blossoms, capturing the beauty of spring.',
+        imageUrl: 'https://i.postimg.cc/1zpJWVcy/Blossom-Scenery.png',
+        imageHint: 'cherry blossom scenery',
     },
     {
         title: 'Floating Islands',
