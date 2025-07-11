@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Github, Linkedin, Mail, Instagram, Brush, RotateCw } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NAV_LINKS, SOCIAL_LINKS, ARTIST_NAV_LINKS, ARTIST_SOCIAL_LINKS } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
@@ -253,22 +253,6 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                     </TooltipTrigger>
                     <TooltipContent>
                       <p>Instagram</p>
-                    </TooltipContent>
-                  </Tooltip>
-                   <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={socialLinks.deviantArt}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="DeviantArt"
-                      >
-                        <Brush className="h-6 w-6" />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>DeviantArt</p>
                     </TooltipContent>
                   </Tooltip>
                 </>

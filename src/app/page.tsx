@@ -10,7 +10,7 @@ import TechStackSection from '@/components/portfolio/TechStackSection';
 import AnimatedSection from '@/components/portfolio/AnimatedSection';
 import Navbar from '@/components/portfolio/Navbar';
 import { SOCIAL_LINKS, ARTIST_SOCIAL_LINKS } from '@/lib/data';
-import { Github, Linkedin, Mail, Instagram, Brush } from 'lucide-react';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import DataAnalysisProjectsSection from '@/components/portfolio/DataAnalysisProjectsSection';
 import ArtistAboutSection from '@/components/portfolio/ArtistAboutSection';
@@ -124,22 +124,6 @@ export default function Home() {
                         </TooltipTrigger>
                         <TooltipContent>
                           <p>Instagram</p>
-                        </TooltipContent>
-                      </Tooltip>
-                      <Tooltip>
-                        <TooltipTrigger asChild>
-                          <a
-                            href={currentSocials.deviantArt}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-muted-foreground hover:text-foreground transition-colors"
-                            aria-label="DeviantArt"
-                          >
-                            <Brush className="h-6 w-6" />
-                          </a>
-                        </TooltipTrigger>
-                        <TooltipContent>
-                          <p>DeviantArt</p>
                         </TooltipContent>
                       </Tooltip>
                     </>
