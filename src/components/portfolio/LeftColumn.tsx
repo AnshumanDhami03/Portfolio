@@ -137,9 +137,6 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                       />
                   </div>
                 </div>
-                <div className="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <RotateCw className="h-8 w-8 text-white" />
-                </div>
               </button>
             </TooltipTrigger>
             <TooltipContent>
