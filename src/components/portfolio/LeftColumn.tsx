@@ -104,49 +104,50 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
   return (
     <header className="lg:sticky lg:top-0 flex flex-col items-center text-center lg:max-h-screen w-full lg:w-3/4 py-12 lg:py-24">
       <div className="flex flex-col items-center text-center">
-        <div className="relative group [perspective:1000px]">
-          <div 
-            className={`relative w-32 h-32 transition-transform duration-700 [transform-style:preserve-3d] ${isDeveloper ? '' : '[transform:rotateY(180deg)]'}`}
-          >
-            <div className="absolute w-full h-full [backface-visibility:hidden]">
-              <Image
-                  src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
-                  alt="Anshuman's developer profile picture"
-                  className="rounded-full object-cover"
-                  width={128}
-                  height={128}
-                  priority
-                  data-ai-hint="profile picture"
-              />
-            </div>
-            <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
-                <Image
-                  src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
-                  alt="Anshuman's artist profile picture"
-                  className="rounded-full object-cover"
-                  width={128}
-                  height={128}
-                  data-ai-hint="artist avatar"
-                />
-            </div>
-          </div>
-          <button 
-            onClick={onProfileToggle}
-            className="absolute -bottom-2 -right-2 z-10 p-1.5 bg-background border rounded-full text-muted-foreground hover:text-foreground hover:bg-secondary transition-all"
-            aria-label="Flip Profile"
-            >
-             <TooltipProvider>
-                <Tooltip>
-                    <TooltipTrigger asChild>
-                        <RotateCw className="h-4 w-4" />
-                    </TooltipTrigger>
-                    <TooltipContent>
-                        <p>Switch to {isDeveloper ? 'Artist' : 'Developer'} Profile</p>
-                    </TooltipContent>
-                </Tooltip>
-             </TooltipProvider>
-          </button>
-        </div>
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                onClick={onProfileToggle}
+                className="group relative [perspective:1000px] bg-transparent border-none p-0 cursor-pointer"
+                aria-label="Flip Profile"
+              >
+                <div 
+                  className={`relative w-32 h-32 transition-transform duration-700 [transform-style:preserve-3d] ${isDeveloper ? '' : '[transform:rotateY(180deg)]'}`}
+                >
+                  <div className="absolute w-full h-full [backface-visibility:hidden]">
+                    <Image
+                        src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
+                        alt="Anshuman's developer profile picture"
+                        className="rounded-full object-cover"
+                        width={128}
+                        height={128}
+                        priority
+                        data-ai-hint="profile picture"
+                    />
+                  </div>
+                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                      <Image
+                        src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
+                        alt="Anshuman's artist profile picture"
+                        className="rounded-full object-cover"
+                        width={128}
+                        height={128}
+                        data-ai-hint="artist avatar"
+                      />
+                  </div>
+                </div>
+                <div className="absolute inset-0 bg-black/50 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <RotateCw className="h-8 w-8 text-white" />
+                </div>
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Switch to {isDeveloper ? 'Artist' : 'Developer'} Profile</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+
 
         <h1 className="group font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl mt-4">
             Hey I'm Anshuman
@@ -296,3 +297,5 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
     </header>
   );
 }
+
+    
