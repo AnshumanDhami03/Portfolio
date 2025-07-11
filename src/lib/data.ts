@@ -145,10 +145,10 @@ export const ARTIST_GALLERY = [
         imageHint: 'cherry blossom scenery',
     },
     {
-        title: 'Floating Islands',
-        description: 'A serene landscape painting of islands drifting in the sky.',
-        imageUrl: 'https://placehold.co/600x400.png',
-        imageHint: 'fantasy landscape',
+        title: 'Gautam Buddha',
+        description: 'A serene portrait of Gautam Buddha in a meditative state, radiating peace and tranquility.',
+        imageUrl: 'https://i.postimg.cc/cCZHQ21s/Gautam-Buddha.png',
+        imageHint: 'gautam buddha portrait',
     },
 ];
 
@@ -170,3 +170,4 @@ export const TECH_STACK = [
     
 
     
+
