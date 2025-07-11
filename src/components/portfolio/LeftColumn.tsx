@@ -3,9 +3,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { NAV_LINKS, SOCIAL_LINKS, ARTIST_NAV_LINKS, ARTIST_SOCIAL_LINKS } from '@/lib/data';
+import { SOCIAL_LINKS } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import type { ProfileType } from '@/app/page';
 
@@ -18,7 +17,6 @@ type LeftColumnProps = {
 };
 
 export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColumnProps) {
-  const [activeSection, setActiveSection] = useState('about');
   const [currentTitle, setCurrentTitle] = useState('');
   const [titleIndex, setTitleIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -26,44 +24,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
 
   const isDeveloper = activeProfile === 'developer';
   const titles = isDeveloper ? developerTitles : artistTitles;
-  const navLinks = isDeveloper ? NAV_LINKS : ARTIST_NAV_LINKS;
-  const socialLinks = isDeveloper ? SOCIAL_LINKS : ARTIST_SOCIAL_LINKS;
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const element = document.querySelector(href);
-    if (element) {
-        const yOffset = -80; 
-        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({top: y, behavior: 'smooth'});
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-        const sections = navLinks.map(link => document.getElementById(link.href.substring(1)));
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
-    
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const section = sections[i];
-            if (section && section.offsetTop <= scrollPosition) {
-                if (activeSection !== section.id) {
-                    setActiveSection(section.id);
-                }
-                return;
-            }
-        }
-    
-        if (window.scrollY < 200 && activeSection !== 'about') {
-            setActiveSection('about');
-        }
-    };
-    
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeSection, navLinks]);
-  
   useEffect(() => {
     // Reset typing animation when profile changes
     setTitleIndex(0);
@@ -102,7 +63,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
 
 
   return (
-    <header className="lg:sticky lg:top-0 flex flex-col items-center text-center lg:max-h-screen w-full lg:w-3/4 py-12 lg:py-24">
+    <header className="flex flex-col items-center text-center w-full py-12 lg:py-24">
       <div className="flex flex-col items-center text-center">
         <TooltipProvider>
           <Tooltip>
@@ -115,7 +76,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                 <div 
                   className={`relative w-32 h-32 transition-transform duration-700 [transform-style:preserve-3d] ${isDeveloper ? '' : '[transform:rotateY(180deg)]'}`}
                 >
-                  <div className="absolute w-full h-full [backface-visibility:hidden] rounded-full border-2 border-[#4B0082] p-1 bg-background">
+                  <div className="absolute w-full h-full [backface-visibility:hidden] rounded-full border-2 border-primary p-1 bg-background">
                      <div className="w-full h-full rounded-full overflow-hidden">
                         <Image
                             src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
@@ -128,7 +89,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                         />
                      </div>
                   </div>
-                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full border-2 border-[#4B0082] p-1 bg-background">
+                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full border-2 border-primary p-1 bg-background">
                       <div className="w-full h-full rounded-full overflow-hidden">
                         <Image
                             src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
@@ -175,104 +136,8 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                 I'm a passionate <span className="font-medium text-foreground">digital artist</span> from <span className="font-medium text-foreground">India</span> 🇮🇳. My work blends vibrant colors with fantasy themes, bringing imaginative characters and worlds to life. I specialize in <span className="font-medium text-foreground">character design</span> and <span className="font-medium text-foreground">concept art</span>.
             </p>
         )}
-
-        <nav className="hidden lg:block mt-8" aria-label="In-page jump links">
-          <ul className="flex items-center gap-6">
-            {navLinks.map((link) => (
-              <li key={link.name}>
-                <a 
-                  className="group flex flex-col items-center py-2" 
-                  href={link.href}
-                  onClick={(e) => handleLinkClick(e, link.href)}
-                >
-                  <span
-                    className={`nav-text text-sm font-medium uppercase tracking-widest transition-colors ${
-                      activeSection === link.href.substring(1) ? 'text-primary' : 'text-muted-foreground group-hover:text-primary'
-                    }`}
-                  >
-                    {link.name}
-                  </span>
-                   <span
-                    className={`nav-indicator mt-1 h-px w-0 bg-primary transition-all duration-300 group-hover:w-full ${
-                      activeSection === link.href.substring(1) ? 'w-full' : ''
-                    }`}
-                  ></span>
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </div>
       <div className="mt-8 flex flex-col items-center">
-        <div className="flex items-center gap-4" aria-label="Social media">
-           <TooltipProvider>
-              {isDeveloper ? (
-                <>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={socialLinks.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="GitHub"
-                      >
-                        <Github className="h-6 w-6" />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>GitHub</p>
-                    </TooltipContent>
-                  </Tooltip>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={socialLinks.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="LinkedIn"
-                      >
-                        <Linkedin className="h-6 w-6" />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>LinkedIn</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </>
-              ) : (
-                <>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <a
-                        href={socialLinks.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-muted-foreground hover:text-foreground transition-colors"
-                        aria-label="Instagram"
-                      >
-                        <Instagram className="h-6 w-6" />
-                      </a>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Instagram</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </>
-              )}
-              <Tooltip>
-                <TooltipTrigger asChild>
-                   <a href={`mailto:${socialLinks.gmail}`} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer" aria-label="Email">
-                        <Mail className="h-6 w-6" />
-                   </a>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>{socialLinks.gmail}</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-        </div>
         {isDeveloper && (
             <Button asChild className="mt-8">
                 <a href="https://drive.google.com/uc?export=download&id=1e6uSrytsS4Z3EkKFPuBoTLqsvVayfLSv" target="_blank" rel="noopener noreferrer">Download CV</a>

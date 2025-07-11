@@ -30,14 +30,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar activeProfile={activeProfile} />
+      <Navbar activeProfile={activeProfile} onProfileToggle={handleProfileToggle} />
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
         <div className="flex flex-col items-center">
           <LeftColumn 
             activeProfile={activeProfile} 
             onProfileToggle={handleProfileToggle} 
           />
-          <main id="content" className="pt-12 lg:pt-24 lg:w-3/4 w-full">
+          <main id="content" className="pt-12 lg:pt-24 w-full">
             {activeProfile === 'developer' ? (
               <>
                 <AnimatedSection>
@@ -130,7 +130,7 @@ export default function Home() {
                   )}
                   <Tooltip>
                     <TooltipTrigger asChild>
-                       <a href={`mailto:${currentSocials.gmail}`} className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer" aria-label="Email">
+                       <a href={`mailto:${currentSocials.gmail}`} className="text-muted-foreground hover:text-foreground cursor-pointer" aria-label="Email">
                         <Mail className="h-6 w-6" />
                        </a>
                     </TooltipTrigger>

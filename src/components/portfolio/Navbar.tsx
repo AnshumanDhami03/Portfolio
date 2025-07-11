@@ -10,9 +10,10 @@ import type { ProfileType } from '@/app/page';
 
 type NavbarProps = {
   activeProfile: ProfileType;
+  onProfileToggle: () => void;
 }
 
-export default function Navbar({ activeProfile }: NavbarProps) {
+export default function Navbar({ activeProfile, onProfileToggle }: NavbarProps) {
   const [activeSection, setActiveSection] = useState('about');
   const [isSheetOpen, setIsSheetOpen] = useState(false);
 
@@ -40,19 +41,24 @@ export default function Navbar({ activeProfile }: NavbarProps) {
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' });
+    const element = document.querySelector(href);
+    if (element) {
+        const yOffset = -80; 
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    }
     setIsSheetOpen(false);
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm lg:hidden">
+    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6">
         <div className="flex items-center justify-between h-16">
           <div className="flex flex-col">
             <a href="#" className="text-xl font-bold font-headline text-foreground">
               WELCOME to <span style={{ color: '#4B0082' }}>ANSHU's</span> Portfolio
             </a>
-            <p className="text-xs text-muted-foreground">Click the <span style={{ color: '#4B0082', fontWeight: 'bold' }}>PHOTO</span> to uncover a fun twist</p>
+            <p className="text-xs text-muted-foreground">Click the <button onClick={onProfileToggle} className="font-bold p-0 m-0 h-auto bg-transparent hover:bg-transparent text-primary">PHOTO</button> to uncover a fun twist</p>
           </div>
           
           <div className="hidden sm:flex items-center space-x-4">
