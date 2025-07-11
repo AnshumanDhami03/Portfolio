@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { NAV_LINKS, SOCIAL_LINKS } from '@/lib/data';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const titles = ['Front end developer', 'Data Analyst'];
 
@@ -130,32 +131,54 @@ export default function LeftColumn() {
         </nav>
       </div>
       <div className="mt-8 flex flex-col items-center">
-        <div className="flex items-center" aria-label="Social media">
-            <a
-              href={SOCIAL_LINKS.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mr-5 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="GitHub"
-            >
-              <Github className="h-6 w-6" />
-            </a>
-            <a
-              href={SOCIAL_LINKS.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mr-5 text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="h-6 w-6" />
-            </a>
-            <a
-              href={`mailto:${SOCIAL_LINKS.gmail}`}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label="Email"
-            >
-              <Mail className="h-6 w-6" />
-            </a>
+        <div className="flex items-center gap-4" aria-label="Social media">
+           <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={SOCIAL_LINKS.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>GitHub</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={SOCIAL_LINKS.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <span
+                    className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+                    aria-label="Email"
+                  >
+                    <Mail className="h-6 w-6" />
+                  </span>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{SOCIAL_LINKS.gmail}</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
         </div>
         <Button asChild className="mt-8">
             <a href="https://drive.google.com/uc?export=download&id=1e6uSrytsS4Z3EkKFPuBoTLqsvVayfLSv" target="_blank" rel="noopener noreferrer">Download CV</a>
