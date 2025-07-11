@@ -72,7 +72,7 @@ export const CATEGORIZED_TECH_STACK = [
             { name: 'Java', icon: 'https://i.postimg.cc/wTdSMjXn/icons8-java-48.png' },
             { name: 'Python', icon: 'https://i.postimg.cc/Cx0BckjJ/icons8-python-48.png' },
             { name: 'JavaScript', icon: 'https://i.postimg.cc/yNMzTXR8/icons8-javascript-48.png' },
-            { name: 'PHP', icon: null },
+            { name: 'PHP', icon: 'https://i.postimg.cc/XYXSSDcv/icons8-php-logo-30.png' },
             { name: 'SQL', icon: null },
         ]
     },
