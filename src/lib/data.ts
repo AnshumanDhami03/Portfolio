@@ -79,7 +79,7 @@ export const CATEGORIZED_TECH_STACK = [
     {
         category: 'Frontend & Frameworks',
         skills: [
-            { name: 'HTML5', icon: 'https://i.postimg.cc/Bb1LVCY7/html.png' },
+            { name: 'HTML5', icon: 'https://i.postimg.cc/ZY9wmtX2/html-5.png' },
             { name: 'CSS3', icon: 'https://i.postimg.cc/G9w8ws6L/css3.png' },
             { name: 'Tailwind CSS', icon: 'https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000' },
             { name: 'React.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="11" ry="4.2"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.2" fill="#61DAFB"/></svg>' },
@@ -105,4 +105,5 @@ export const TECH_STACK = [
 
 
 
+    
     
