@@ -5,6 +5,8 @@ import ProjectsSection from '@/components/portfolio/ProjectsSection';
 import TechStackSection from '@/components/portfolio/TechStackSection';
 import AnimatedSection from '@/components/portfolio/AnimatedSection';
 import Navbar from '@/components/portfolio/Navbar';
+import { SOCIAL_LINKS } from '@/lib/data';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -28,18 +30,33 @@ export default function Home() {
             </AnimatedSection>
 
             <footer className="mt-16 text-center text-sm text-muted-foreground">
-              <p>
-                Design inspired by{' '}
+              <div className="flex items-center justify-center gap-4" aria-label="Social media">
                 <a
-                  href="https://duyle.dev/"
-                  className="font-medium text-primary hover:underline"
+                  href={SOCIAL_LINKS.github}
                   target="_blank"
-                  rel="noreferrer noopener"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="GitHub"
                 >
-                  Duy Le
+                  <Github className="h-6 w-6" />
                 </a>
-                . Built with Next.js & Tailwind CSS.
-              </p>
+                <a
+                  href={SOCIAL_LINKS.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="h-6 w-6" />
+                </a>
+                <a
+                  href={`mailto:${SOCIAL_LINKS.gmail}`}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  aria-label="Email"
+                >
+                  <Mail className="h-6 w-6" />
+                </a>
+              </div>
             </footer>
           </main>
         </div>
