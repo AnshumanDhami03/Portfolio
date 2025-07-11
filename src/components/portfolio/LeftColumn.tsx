@@ -102,6 +102,9 @@ export default function LeftColumn() {
         <p className="mt-4 max-w-lg leading-normal text-muted-foreground">
             I'm a creative <span className="font-medium text-foreground">Frontend developer</span> based in <span className="font-medium text-foreground">India</span> 🇮🇳. I specialize in <span className="font-medium text-foreground">UI</span> design and <span className="font-medium text-foreground">TypeScript</span> crafting engaging user experiences with great attention to detail.
         </p>
+        <p className="mt-4 max-w-lg leading-normal text-muted-foreground">
+            In addition to frontend development, I work with data to extract insights and support better decisions. I specialize in <span className="font-medium text-foreground">Excel</span>, <span className="font-medium text-foreground">SQL</span>, <span className="font-medium text-foreground">Python</span>, and <span className="font-medium text-foreground">Power BI</span>, and have used these tools to organize, analyze, and visualize datasets in practical projects.
+        </p>
 
         <nav className="hidden lg:block mt-8" aria-label="In-page jump links">
           <ul className="flex items-center gap-6">
