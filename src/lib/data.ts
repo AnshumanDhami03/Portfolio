@@ -70,7 +70,7 @@ export const DATA_ANALYSIS_PROJECTS = [
     {
         title: 'Movie Rental Analysis (Power BI)',
         description: 'This Power BI project explores key business insights for a movie rental service across six areas: location, revenue, customer behavior, rental patterns, film performance, and actor preferences. Using visualizations and filters, the dashboard highlights how factors like store geography, film categories, and customer segments impact rental trends and revenue generation. The report includes performance metrics such as rental rates, customer activity, popular genres, and actor influence—helping to identify high-performing stores, profitable films, and targeted marketing opportunities.',
-        imageUrl: 'https://i.postimg.cc/d1gWhXqQ/power-bi-939x470.png',
+        imageUrl: 'https://i.postimg.cc/FzkGyC0p/Screenshot-2025-07-11-090708.png',
         imageHint: 'movie rental dashboard',
         tech: ['Power BI', 'Excel', 'SQL'],
         liveUrl: '#',
@@ -120,5 +120,6 @@ export const TECH_STACK = [
 
     
     
+
 
 
