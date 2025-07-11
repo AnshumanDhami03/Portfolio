@@ -121,7 +121,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
             </div>
             <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
                 <Image
-                  src="https://i.postimg.cc/6qKzZJ3H/artist-profile.png"
+                  src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
                   alt="Anshuman's artist profile picture"
                   className="rounded-full object-cover"
                   width={128}
