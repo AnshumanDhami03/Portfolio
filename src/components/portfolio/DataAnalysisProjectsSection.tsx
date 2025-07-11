@@ -26,7 +26,7 @@ export default function DataAnalysisProjectsSection() {
                   </a>
                 </h3>
                 <p className="mt-2 text-sm leading-normal text-muted-foreground">{project.description}</p>
-                <div className="mt-2 flex items-center gap-4">
+                <div className="mt-2 flex items-center gap-4 relative z-10">
                     {project.githubUrl && (
                         <a href={project.githubUrl} target="_blank" rel="noreferrer noopener" className="text-muted-foreground hover:text-primary transition-colors">
                             <Github className="h-5 w-5" />
