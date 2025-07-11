@@ -120,6 +120,15 @@ export const CATEGORIZED_TECH_STACK = [
             { name: 'React.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="11" ry="4.2"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.2" fill="#61DAFB"/></svg>' },
             { name: 'TypeScript', icon: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000' },
         ]
+    },
+    {
+        category: 'Data Analyst Skillset',
+        skills: [
+            { name: 'Microsoft Excel', icon: 'https://i.postimg.cc/cLYxVwgV/icons8-microsoft-excel-2019-48.png' },
+            { name: 'Python', icon: 'https://i.postimg.cc/Cx0BckjJ/icons8-python-48.png' },
+            { name: 'SQL', icon: 'https://i.postimg.cc/XvV5YdqX/sql-server.png' },
+            { name: 'Power BI', icon: 'https://i.postimg.cc/7Z02s2Zb/icons8-power-bi-2021-48.png' },
+        ]
     }
 ];
 
@@ -181,6 +190,7 @@ export const TECH_STACK = [
     
 
     
+
 
 
 
