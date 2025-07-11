@@ -8,6 +8,7 @@ import Navbar from '@/components/portfolio/Navbar';
 import { SOCIAL_LINKS } from '@/lib/data';
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import DataAnalysisProjectsSection from '@/components/portfolio/DataAnalysisProjectsSection';
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
             </AnimatedSection>
             <AnimatedSection>
               <ProjectsSection />
+            </AnimatedSection>
+            <AnimatedSection>
+              <DataAnalysisProjectsSection />
             </AnimatedSection>
 
             <footer className="mt-16 text-center text-sm text-muted-foreground">

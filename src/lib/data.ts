@@ -4,6 +4,7 @@ export const NAV_LINKS = [
   { name: 'Experience', href: '#experience' },
   { name: 'Tech Stack', href: '#tech-stack'},
   { name: 'Projects', href: '#projects' },
+  { name: 'Data Analysis', href: '#data-analysis' },
 ];
 
 export const SOCIAL_LINKS = {
@@ -65,6 +66,18 @@ export const PROJECTS = [
     },
 ];
 
+export const DATA_ANALYSIS_PROJECTS = [
+    {
+        title: 'Sales Dashboard',
+        description: 'An interactive Power BI dashboard analyzing sales data across regions. Features include KPI tracking, trend analysis, and product performance visualization to drive business insights.',
+        imageUrl: 'https://i.postimg.cc/d1gWhXqQ/power-bi-939x470.png',
+        imageHint: 'sales dashboard',
+        tech: ['Power BI', 'DAX', 'Data Modeling'],
+        liveUrl: '#',
+        githubUrl: null,
+    },
+]
+
 export const CATEGORIZED_TECH_STACK = [
     {
         category: 'Programming Languages',
@@ -107,3 +120,4 @@ export const TECH_STACK = [
 
     
     
+
