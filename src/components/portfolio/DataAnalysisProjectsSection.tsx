@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import SectionWrapper from './SectionWrapper';
 import { Badge } from '@/components/ui/badge';
 import { DATA_ANALYSIS_PROJECTS } from '@/lib/data';
@@ -16,7 +16,7 @@ export default function DataAnalysisProjectsSection() {
                 <h3>
                   <a
                     className="inline-flex items-baseline font-medium leading-tight text-foreground hover:text-primary focus-visible:text-primary group/link text-base"
-                    href={project.liveUrl || '#'}
+                    href={project.liveUrl || project.githubUrl || '#'}
                     target="_blank"
                     rel="noreferrer noopener"
                     aria-label={project.title}
@@ -27,6 +27,11 @@ export default function DataAnalysisProjectsSection() {
                 </h3>
                 <p className="mt-2 text-sm leading-normal text-muted-foreground">{project.description}</p>
                 <div className="mt-2 flex items-center gap-4">
+                    {project.githubUrl && (
+                        <a href={project.githubUrl} target="_blank" rel="noreferrer noopener" className="text-muted-foreground hover:text-primary transition-colors">
+                            <Github className="h-5 w-5" />
+                        </a>
+                    )}
                     {project.liveUrl && (
                         <a href={project.liveUrl} target="_blank" rel="noreferrer noopener" className="text-muted-foreground hover:text-primary transition-colors">
                             <ExternalLink className="h-5 w-5" />

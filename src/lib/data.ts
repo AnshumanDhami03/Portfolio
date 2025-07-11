@@ -73,8 +73,8 @@ export const DATA_ANALYSIS_PROJECTS = [
         imageUrl: 'https://i.postimg.cc/FzkGyC0p/Screenshot-2025-07-11-090708.png',
         imageHint: 'movie rental dashboard',
         tech: ['Power BI', 'Excel', 'SQL'],
-        liveUrl: '#',
-        githubUrl: null,
+        liveUrl: null,
+        githubUrl: 'https://github.com/AnshumanDhami03/Movie-Rental',
     },
 ]
 
@@ -120,6 +120,7 @@ export const TECH_STACK = [
 
     
     
+
 
 
 
