@@ -150,6 +150,12 @@ export const ARTIST_GALLERY = [
         imageUrl: 'https://i.postimg.cc/cCZHQ21s/Gautam-Buddha.png',
         imageHint: 'gautam buddha portrait',
     },
+    {
+        title: 'Ship at Sea',
+        description: 'A majestic ship sailing on the open ocean, capturing the spirit of adventure.',
+        imageUrl: 'https://i.postimg.cc/mgr372Cj/Ship.jpg',
+        imageHint: 'ship sea',
+    },
 ];
 
 export const TECH_STACK = [
@@ -170,4 +176,5 @@ export const TECH_STACK = [
     
 
     
+
 
