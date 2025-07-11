@@ -71,7 +71,7 @@ export const CATEGORIZED_TECH_STACK = [
         skills: [
             { name: 'Java', icon: 'https://i.postimg.cc/wTdSMjXn/icons8-java-48.png' },
             { name: 'Python', icon: 'https://i.postimg.cc/Cx0BckjJ/icons8-python-48.png' },
-            { name: 'JavaScript', icon: null },
+            { name: 'JavaScript', icon: 'https://i.postimg.cc/yNMzTXR8/icons8-javascript-48.png' },
             { name: 'PHP', icon: null },
             { name: 'SQL', icon: null },
         ]
@@ -81,9 +81,9 @@ export const CATEGORIZED_TECH_STACK = [
         skills: [
             { name: 'HTML5', icon: '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48"><path fill="#E65100" d="M41,5H7l3,34l14,4l14-4L41,5z"></path><path fill="#FF6D00" d="M24,8v31.9l11.2-3.2L37.7,8H24z"></path><path fill="#FFFFFF" d="M33.1 13L24 13 24 17 28.9 17 28.5 21 24 21 24 25 28.1 25 27.5 32.2 24 33.2 24 37.1 32.2 34.5 33.1 23.5 33.1 13z"></path><path fill="#EEEEEE" d="M24,13v4h-8.9l-0.3-4H24z M19.5,21H24v4h-4.9l-0.3-4H19.5z M19.1,27h4.9v4.2l-4.1,1.1v-4.1L19.1,27z"></path></svg>' },
             { name: 'CSS3', icon: '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48"><path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5z"></path><path fill="#039BE5" d="M24,8v31.9l11.2-3.2L37.7,8H24z"></path><path fill="#FFFFFF" d="M33.1 13L24 13 24 17 28.9 17 28.5 21 24 21 24 25 28.1 25 27.5 32.2 24 33.2 24 37.1 32.2 34.5 33.1 23.5 33.1 13z"></path><path fill="#EEEEEE" d="M24,13v4h-8.9l-0.3-4H24z M19.5,21H24v4h-4.9l-0.3-4H19.5z M19.1,27h4.9v4.2l-4.1,1.1v-4.1L19.1,27z"></path></svg>' },
-            { name: 'Tailwind CSS', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#38BDF8"><path d="M12 4.5c-3.3 0-5.4 1.7-6.3 4.2c1.2-1.6,2.7-2.3,4.4-1.8c.9.2,1.6.8,2.3 1.5c1.1 1.1,2.5 2.6,5.6 2.6c3.3 0,5.4-1.7,6.3-4.2c-1.2 1.6-2.7 2.3-4.4 1.8c-.9-.2-1.6-.8-2.3-1.5c-1.1-1.1-2.5-2.6-5.6-2.6zm-5.7 7.5c-3.3 0-5.4 1.7-6.3 4.2c1.2-1.6,2.7-2.3,4.4-1.8c.9.2,1.6.8,2.3 1.5c1.1 1.1,2.5 2.6,5.6 2.6c3.3 0,5.4-1.7,6.3-4.2c-1.2 1.6-2.7 2.3-4.4 1.8c-.9-.2-1.6-.8-2.3-1.5c-1.1-1.1-2.5-2.6-5.6-2.6z"/></svg>' },
+            { name: 'Tailwind CSS', icon: 'https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000' },
             { name: 'React.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="11" ry="4.2"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.2" fill="#61DAFB"/></svg>' },
-            { name: 'TypeScript', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48"><path fill="#3178c6" d="M24,4A20,20,0,1,0,44,24,20,20,0,0,0,24,4Zm11,20a1.84,1.84,0,0,1-1.83,1.84H14.83A1.84,1.84,0,0,1,13,24V14.83A1.84,1.84,0,0,1,14.83,13H24a1.84,1.84,0,0,1,1.83,1.83Z"/><path fill="#fff" d="M22.5,28h-6V26h6Zm0-4h-6V22h6Zm0-4h-9V18h9Zm0-4h-9V14h9Zm9,12H27V26h4.5ZM31.5,20H27v2h4.5Zm0-4H27v2h4.5Zm0-4H27v2h4.5Z"/></svg>' },
+            { name: 'TypeScript', icon: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000' },
         ]
     }
 ];
