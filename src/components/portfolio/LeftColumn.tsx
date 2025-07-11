@@ -115,7 +115,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                 <div 
                   className={`relative w-32 h-32 transition-transform duration-700 [transform-style:preserve-3d] ${isDeveloper ? '' : '[transform:rotateY(180deg)]'}`}
                 >
-                  <div className="absolute w-full h-full [backface-visibility:hidden]">
+                  <div className="absolute w-full h-full [backface-visibility:hidden] rounded-full border-2 border-[#4B0082]">
                     <Image
                         src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
                         alt="Anshuman's developer profile picture"
@@ -126,7 +126,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                         data-ai-hint="profile picture"
                     />
                   </div>
-                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)]">
+                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full border-2 border-[#4B0082]">
                       <Image
                         src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
                         alt="Anshuman's artist profile picture"
@@ -278,5 +278,3 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
     </header>
   );
 }
-
-    
