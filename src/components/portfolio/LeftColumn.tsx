@@ -115,26 +115,30 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
                 <div 
                   className={`relative w-32 h-32 transition-transform duration-700 [transform-style:preserve-3d] ${isDeveloper ? '' : '[transform:rotateY(180deg)]'}`}
                 >
-                  <div className="absolute w-full h-full [backface-visibility:hidden] rounded-full border-2 border-[#4B0082] overflow-hidden">
-                    <Image
-                        src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
-                        alt="Anshuman's developer profile picture"
-                        className="w-full h-full object-cover"
-                        width={128}
-                        height={128}
-                        priority
-                        data-ai-hint="profile picture"
-                    />
+                  <div className="absolute w-full h-full [backface-visibility:hidden] rounded-full border-2 border-[#4B0082] p-1 bg-background">
+                     <div className="w-full h-full rounded-full overflow-hidden">
+                        <Image
+                            src="https://i.postimg.cc/sDNdQc39/Whats-App-Image-2024-11-05-at-21-45-17-a0cd1fbd.jpg"
+                            alt="Anshuman's developer profile picture"
+                            className="w-full h-full object-cover"
+                            width={128}
+                            height={128}
+                            priority
+                            data-ai-hint="profile picture"
+                        />
+                     </div>
                   </div>
-                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full border-2 border-[#4B0082] overflow-hidden">
-                      <Image
-                        src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
-                        alt="Anshuman's artist profile picture"
-                        className="w-full h-full object-cover"
-                        width={128}
-                        height={128}
-                        data-ai-hint="artist avatar"
-                      />
+                  <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] rounded-full border-2 border-[#4B0082] p-1 bg-background">
+                      <div className="w-full h-full rounded-full overflow-hidden">
+                        <Image
+                            src="https://i.postimg.cc/sxZgMxxd/Anshuman-DP.jpg"
+                            alt="Anshuman's artist profile picture"
+                            className="w-full h-full object-cover"
+                            width={128}
+                            height={128}
+                            data-ai-hint="artist avatar"
+                        />
+                      </div>
                   </div>
                 </div>
               </button>
