@@ -4,9 +4,10 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { SOCIAL_LINKS } from '@/lib/data';
+import { SOCIAL_LINKS, ARTIST_SOCIAL_LINKS } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import type { ProfileType } from '@/app/page';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 
 const developerTitles = ['Front-End Developer', 'Data Analyst'];
 const artistTitles = ['Digital Artist', 'Illustrator'];
@@ -24,6 +25,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
 
   const isDeveloper = activeProfile === 'developer';
   const titles = isDeveloper ? developerTitles : artistTitles;
+  const currentSocials = isDeveloper ? SOCIAL_LINKS : ARTIST_SOCIAL_LINKS;
 
   useEffect(() => {
     // Reset typing animation when profile changes
@@ -137,9 +139,80 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
             </p>
         )}
       </div>
+
+       <div className="mt-8 flex items-center justify-center gap-4" aria-label="Social media">
+        <TooltipProvider>
+          {isDeveloper ? (
+            <>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={currentSocials.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="GitHub"
+                  >
+                    <Github className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>GitHub</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={currentSocials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>LinkedIn</p>
+                </TooltipContent>
+              </Tooltip>
+            </>
+          ) : (
+            <>
+               <Tooltip>
+                <TooltipTrigger asChild>
+                  <a
+                    href={currentSocials.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="h-6 w-6" />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Instagram</p>
+                </TooltipContent>
+              </Tooltip>
+            </>
+          )}
+          <Tooltip>
+            <TooltipTrigger asChild>
+               <a href={`mailto:${currentSocials.gmail}`} className="text-muted-foreground hover:text-foreground cursor-pointer" aria-label="Email">
+                <Mail className="h-6 w-6" />
+               </a>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{currentSocials.gmail}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      </div>
+
       <div className="mt-8 flex flex-col items-center">
         {isDeveloper && (
-            <Button asChild className="mt-8">
+            <Button asChild>
                 <a href="https://drive.google.com/uc?export=download&id=1e6uSrytsS4Z3EkKFPuBoTLqsvVayfLSv" target="_blank" rel="noopener noreferrer">Download CV</a>
             </Button>
         )}
