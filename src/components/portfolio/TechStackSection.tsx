@@ -1,5 +1,6 @@
 import SectionWrapper from './SectionWrapper';
 import { CATEGORIZED_TECH_STACK } from '@/lib/data';
+import Image from 'next/image';
 
 export default function TechStackSection() {
   return (
@@ -12,10 +13,20 @@ export default function TechStackSection() {
               {category.skills.map((tech) => (
                 <div key={tech.name} className="flex flex-col items-center justify-center p-4 rounded-lg bg-secondary/30 transition-all hover:bg-secondary/70 hover:shadow-lg">
                   {tech.icon && (
-                    <div
-                      className="h-10 w-10 mb-2 [&>svg]:w-full [&>svg]:h-full"
-                      dangerouslySetInnerHTML={{ __html: tech.icon }}
-                    />
+                    tech.icon.startsWith('<svg') ? (
+                       <div
+                        className="h-10 w-10 mb-2 [&>svg]:w-full [&>svg]:h-full"
+                        dangerouslySetInnerHTML={{ __html: tech.icon }}
+                      />
+                    ) : (
+                      <Image 
+                        src={tech.icon} 
+                        alt={`${tech.name} icon`} 
+                        width={40} 
+                        height={40}
+                        className="h-10 w-10 mb-2 object-contain"
+                      />
+                    )
                   )}
                   <p className="text-sm font-medium text-center">{tech.name}</p>
                 </div>

@@ -69,7 +69,7 @@ export const CATEGORIZED_TECH_STACK = [
     {
         category: 'Programming Languages',
         skills: [
-            { name: 'Java', icon: null },
+            { name: 'Java', icon: 'https://i.postimg.cc/wTdSMjXn/icons8-java-48.png' },
             { name: 'Python', icon: null },
             { name: 'JavaScript', icon: null },
             { name: 'PHP', icon: null },
