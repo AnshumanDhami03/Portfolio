@@ -80,7 +80,7 @@ export const CATEGORIZED_TECH_STACK = [
         category: 'Frontend & Frameworks',
         skills: [
             { name: 'HTML5', icon: 'https://i.postimg.cc/Bb1LVCY7/html.png' },
-            { name: 'CSS3', icon: '<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48"><path fill="#0277BD" d="M41,5H7l3,34l14,4l14-4L41,5z"></path><path fill="#039BE5" d="M24,8v31.9l11.2-3.2L37.7,8H24z"></path><path fill="#FFFFFF" d="M33.1 13L24 13 24 17 28.9 17 28.5 21 24 21 24 25 28.1 25 27.5 32.2 24 33.2 24 37.1 32.2 34.5 33.1 23.5 33.1 13z"></path><path fill="#EEEEEE" d="M24,13v4h-8.9l-0.3-4H24z M19.5,21H24v4h-4.9l-0.3-4H19.5z M19.1,27h4.9v4.2l-4.1,1.1v-4.1L19.1,27z"></path></svg>' },
+            { name: 'CSS3', icon: 'https://i.postimg.cc/G9w8ws6L/css3.png' },
             { name: 'Tailwind CSS', icon: 'https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000' },
             { name: 'React.js', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="12" rx="11" ry="4.2"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4.2" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.2" fill="#61DAFB"/></svg>' },
             { name: 'TypeScript', icon: 'https://img.icons8.com/?size=100&id=uJM6fQYqDaZK&format=png&color=000000' },
@@ -103,3 +103,6 @@ export const TECH_STACK = [
     { name: 'Figma', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-figma"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>' },
 ];
 
+
+
+    
