@@ -30,13 +30,18 @@ export default function ContactMeSection() {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
-    // In a real app, you would handle form submission here (e.g., send an email or save to a database)
-    console.log(values);
+    const subject = encodeURIComponent(`Message from ${values.name} via your portfolio`);
+    const body = encodeURIComponent(
+      `${values.message}\n\nFrom: ${values.name}\nEmail: ${values.email}`
+    );
+    const mailtoLink = `mailto:${ARTIST_SOCIAL_LINKS.gmail}?subject=${subject}&body=${body}`;
+    
+    window.location.href = mailtoLink;
+
     toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
+      title: "Opening Email Client",
+      description: "Please complete sending the message in your email application.",
     });
-    form.reset();
   };
 
   return (
