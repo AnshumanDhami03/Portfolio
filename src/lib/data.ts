@@ -76,7 +76,16 @@ export const DATA_ANALYSIS_PROJECTS = [
         liveUrl: null,
         githubUrl: 'https://github.com/AnshumanDhami03/Movie-Rental',
     },
-]
+    {
+        title: 'Loan Data Dashboard Suite (Power BI)',
+        description: 'Designed to support informed decision-making, the visuals help identify patterns, track portfolio risks, and uncover areas for operational improvement. By bringing together multiple perspectives in one platform, the project aims to simplify complex loan data and turn it into practical, actionable insights. Built using Power BI, Excel, and SQL, the solution enables data filtering, trend identification, and risk tracking.',
+        imageUrl: 'https://placehold.co/200x48.png',
+        imageHint: 'loan dashboard',
+        tech: ['Power BI', 'Excel', 'SQL'],
+        liveUrl: null,
+        githubUrl: null,
+    },
+];
 
 export const CATEGORIZED_TECH_STACK = [
     {
@@ -120,6 +129,7 @@ export const TECH_STACK = [
 
     
     
+
 
 
 
