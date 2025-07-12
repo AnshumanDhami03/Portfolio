@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <>
       <Navbar activeProfile={activeProfile} onProfileToggle={handleProfileToggle} />
-      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0">
+      <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24">
         <div className="flex flex-col items-center">
           <LeftColumn 
             activeProfile={activeProfile} 

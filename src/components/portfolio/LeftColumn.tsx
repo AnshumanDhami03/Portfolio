@@ -65,7 +65,7 @@ export default function LeftColumn({ activeProfile, onProfileToggle }: LeftColum
 
 
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+    <header className="w-full">
       <div className="flex flex-col items-center text-center">
         <TooltipProvider>
           <Tooltip>
